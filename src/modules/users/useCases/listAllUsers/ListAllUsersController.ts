@@ -11,7 +11,7 @@ class ListAllUsersController {
 		try {
 			const allUsers = this.listAllUsersUseCase.execute({user_id})
 	
-			return response.status(201).json(allUsers)
+			return response.status(200).json(allUsers)
 			
 		} catch (err) {
 			return response.status(400).send({error: err.message})
